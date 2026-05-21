@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "dependencies": {
+    "@huggingface/inference": "^4.13.16",
+    "@langchain/community": "^1.1.28",
+    "@langchain/core": "^1.1.47",
+    "@langchain/groq": "^1.2.1",
+    "@langchain/textsplitters": "^1.0.1",
+    "@supabase/supabase-js": "^2.106.1",
+    "hono": "^4.12.21"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260520.1",
+    "wrangler": "^4.4.0"
+  }
+}
