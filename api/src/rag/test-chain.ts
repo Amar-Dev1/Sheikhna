@@ -1,15 +1,14 @@
-import { Context } from "hono";
 import { answer } from "./chain";
 
-let env;
-export const testAnswer = async (c:Context) => {
+
+export const testAnswer = async (env:any) => {
   try {
-    const result = await answer("ماهي أحكام الصلاة ؟", c.env);
-    env = c.env;
+    const result = await answer("اذا صمنا عرفة في العشر الأواخر من رمصان، هل يمكن جمع نية الصيام معا ام لا", env);
+    
     console.log(result);
   } catch (err) {
     console.error(err);
   }
 };
 
-testAnswer(env!);
+testAnswer(process.env);
